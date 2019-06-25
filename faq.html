@@ -11,6 +11,37 @@
         background-color: #8a8a8a;
         border: 1px solid #638da6;
       }
+      ul.top {
+        list-style-type: none;
+        padding: 10px;
+        overflow: hidden;
+        background-color: #8a8a8a;
+        border: 1px solid #638da6;
+      }
+      li.top {
+        float: left;
+        display: block;
+        color: #ddddff
+      }
+
+      .sidenav {
+        width: 100px;
+        position: fixed;
+        z-index: 1;
+        top: 200px;
+        left: 0;
+        background: #8a8a8a;
+        border: 1px solid #638da6;
+        overflow-x: hidden;
+        padding: 8px 0;
+      }
+      .sidenav a {
+        float: left;
+        display: block;
+        color: #202020;
+        padding: 6px 8px 6px 16px;
+      }
+
       .topsec{
         display: block;
         padding: 15px 15px;
@@ -28,7 +59,7 @@
         cursor: pointer;
         padding: 18px;
         width: 100%;
-        border: none;
+        border: 1px solid #638da6;
         text-align: left;
         outline: none;
         font-size: 15px;
@@ -59,50 +90,94 @@
     <div id="header" >
       <h1 style="margin-bottom:0; color:#638DA6">The MilkCrate Navigation Bar</h1></div>
 
-      <div class="topbar">
+  <!--    <div class="topbar">
         <div class="row">
           <div class="col-sm-4">MilkCrate Icon here</div>
           <div class="col-sm-4">Help Page for MilkCrate Clients</div>
           <input type="text" placeholder="Search your question">
             <button class="search">Search</button>
         </div>
-      </div>
+      </div>-->
+      <ul class="top">
+        <li class="top">MilkCrate Icon Here</li>
+        <li class="top">Help page for Milkcrate Clients</li>
+        <li style="float:right" class="top"><input type="text" placeholder="Search your question">
+            <button class="search">Search</button></li>
+      </ul>
 
       <div class="topsec">
         <div class="row">
           <div class="col-sm-3">
-            <img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50">
+            <a href="#FAQ"><img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50"></a>
           </div>
           <div class="col-sm-3">
-            <img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50">
+            <a href="#S1"><img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50"></a>
           </div>
           <div class="col-sm-3">
-            <img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50">
+            <a href="#S2"><img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50"></a>
           </div>
           <div class="col-sm-3">
-            <img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50">
+            <a href="#S3"><img src="http://cdn.onlinewebfonts.com/svg/img_148071.png" alt="holder image" width="50" height="50"></a>
           </div>
         </div>
       </div>
 
-      <div class="font-weight-bold" style="font-size:36px;width: 100%;height: 55px;display: block;line-height: 65px;text-align: center;"> FAQ</div>
-      <button class="accordion">Section 1
-<!--        <span style="float: right;font-size: 18px">-</span>-->
-      </button>
-      <div class="panel">
-        <p class="answers">Answer 1</p>
-      </div>
-      <button class="accordion">Section 2
+    <div class="sidenav">
+      <a href="#FAQ">FAQ</a>
+      <a href="#S1">Section 1</a>
+      <a href="#S2">Section 2</a>
+      <a href="#S3">Section 3</a>
+    </div>
+
+
+      <h2 id="FAQ">FAQ</h2>
+      <button class="accordion"> Question 1
         <span style="float: right;font-size: 18px">-</span>
       </button>
       <div class="panel">
-        <p class="answers">Answer 2</p>
+        <p class="answers"> Answer 2: This will be one of the most frequent questions.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel velit non risus pretium pulvinar non dignissim velit. Suspendisse pharetra metus ante, sit amet iaculis risus euismod nec. Nulla varius nisi quis ligula dignissim, at volutpat lorem ultricies. Quisque blandit ex in pretium mollis. Donec consectetur, nunc in tristique faucibus, metus nulla vehicula enim, et feugiat orci ipsum nec nisi. Nulla gravida venenatis tristique. Donec volutpat erat lorem, sit amet imperdiet lectus lacinia eu. Donec eleifend tristique nulla, at placerat dui finibus quis. Sed vel malesuada metus, vitae mollis dolor. Donec lobortis dictum neque, vitae ultricies dolor tristique at. Morbi vestibulum viverra sapien.
+
+          Vivamus leo tellus, luctus id vulputate a, viverra ut orci. Donec vitae metus convallis, sollicitudin elit vitae, ultricies ex. Vivamus rutrum lacus non tellus sodales, vel pharetra dolor suscipit. Nunc eget augue pretium, sodales metus eget, sagittis quam. Nam ullamcorper ut nisl quis ultricies. Nulla et mattis enim. Duis tempus facilisis feugiat.
+
+          Donec egestas metus eu mollis ullamcorper. Ut varius sapien elit, blandit blandit odio euismod in. In porta ligula non urna faucibus, sit amet pulvinar odio maximus. Vestibulum malesuada dignissim sollicitudin. Morbi ornare neque orci, vitae interdum dolor scelerisque eu. Nullam sodales et massa at aliquet. Fusce tempus erat ut metus elementum faucibus. Suspendisse potenti. Quisque at dapibus dolor. Suspendisse rutrum facilisis ipsum eu venenatis.
+
+          Nam nec odio sed lorem tempus gravida at in libero. Vestibulum in tincidunt enim. Vestibulum tempor, risus at dignissim lobortis, libero ligula varius dolor, ut suscipit magna ipsum auctor ex. Mauris dignissim ex sed iaculis commodo. In eget felis urna. Donec leo dui, egestas sed viverra eu, suscipit auctor augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis viverra, ligula ut consectetur vestibulum, lectus libero sagittis diam, a vestibulum mauris erat nec elit. In vehicula euismod ex. In ac tortor est. Nullam dictum, odio vel tempor porttitor, sem magna interdum augue, et congue tortor diam a augue. Etiam congue posuere vehicula. Quisque nulla mi, aliquet at nisl sed, porttitor imperdiet quam.
+
+          Integer massa nunc, ultrices ac lectus non, dignissim blandit neque. Praesent a varius libero. Suspendisse ac pharetra urna. Maecenas egestas porttitor enim, sed aliquet orci sagittis sit amet. Morbi quis euismod est. Morbi placerat tortor nisl, quis lobortis orci eleifend euismod. Aliquam eget purus et enim vestibulum vestibulum sit amet eget lacus. Cras interdum ex mi, at faucibus orci volutpat eu. Vivamus quis viverra mauris, eu bibendum elit. Donec vel mattis dolor. Proin odio dolor, scelerisque et ullamcorper lacinia, vulputate iaculis velit.
+        </p>
       </div>
-      <button class="accordion">Section 3
+      <button class="accordion">Question 2
         <span style="float: right;font-size: 18px">-</span>
       </button>
       <div class="panel">
-        <p class="answers">Answer 3</p>
+        <p class="answers">Answer 2:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel velit non risus pretium pulvinar non dignissim velit. Suspendisse pharetra metus ante, sit amet iaculis risus euismod nec. Nulla varius nisi quis ligula dignissim, at volutpat lorem ultricies. Quisque blandit ex in pretium mollis. Donec consectetur, nunc in tristique faucibus, metus nulla vehicula enim, et feugiat orci ipsum nec nisi. Nulla gravida venenatis tristique. Donec volutpat erat lorem, sit amet imperdiet lectus lacinia eu. Donec eleifend tristique nulla, at placerat dui finibus quis. Sed vel malesuada metus, vitae mollis dolor. Donec lobortis dictum neque, vitae ultricies dolor tristique at. Morbi vestibulum viverra sapien.
+
+          Vivamus leo tellus, luctus id vulputate a, viverra ut orci. Donec vitae metus convallis, sollicitudin elit vitae, ultricies ex. Vivamus rutrum lacus non tellus sodales, vel pharetra dolor suscipit. Nunc eget augue pretium, sodales metus eget, sagittis quam. Nam ullamcorper ut nisl quis ultricies. Nulla et mattis enim. Duis tempus facilisis feugiat.
+
+          Donec egestas metus eu mollis ullamcorper. Ut varius sapien elit, blandit blandit odio euismod in. In porta ligula non urna faucibus, sit amet pulvinar odio maximus. Vestibulum malesuada dignissim sollicitudin. Morbi ornare neque orci, vitae interdum dolor scelerisque eu. Nullam sodales et massa at aliquet. Fusce tempus erat ut metus elementum faucibus. Suspendisse potenti. Quisque at dapibus dolor. Suspendisse rutrum facilisis ipsum eu venenatis.
+
+          Nam nec odio sed lorem tempus gravida at in libero. Vestibulum in tincidunt enim. Vestibulum tempor, risus at dignissim lobortis, libero ligula varius dolor, ut suscipit magna ipsum auctor ex. Mauris dignissim ex sed iaculis commodo. In eget felis urna. Donec leo dui, egestas sed viverra eu, suscipit auctor augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis viverra, ligula ut consectetur vestibulum, lectus libero sagittis diam, a vestibulum mauris erat nec elit. In vehicula euismod ex. In ac tortor est. Nullam dictum, odio vel tempor porttitor, sem magna interdum augue, et congue tortor diam a augue. Etiam congue posuere vehicula. Quisque nulla mi, aliquet at nisl sed, porttitor imperdiet quam.
+
+          Integer massa nunc, ultrices ac lectus non, dignissim blandit neque. Praesent a varius libero. Suspendisse ac pharetra urna. Maecenas egestas porttitor enim, sed aliquet orci sagittis sit amet. Morbi quis euismod est. Morbi placerat tortor nisl, quis lobortis orci eleifend euismod. Aliquam eget purus et enim vestibulum vestibulum sit amet eget lacus. Cras interdum ex mi, at faucibus orci volutpat eu. Vivamus quis viverra mauris, eu bibendum elit. Donec vel mattis dolor. Proin odio dolor, scelerisque et ullamcorper lacinia, vulputate iaculis velit.
+        </p>
+      </div>
+      <button class="accordion">Question 3
+        <span style="float: right;font-size: 18px">-</span>
+      </button>
+      <div class="panel">
+        <p class="answers">Answer 3
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel velit non risus pretium pulvinar non dignissim velit. Suspendisse pharetra metus ante, sit amet iaculis risus euismod nec. Nulla varius nisi quis ligula dignissim, at volutpat lorem ultricies. Quisque blandit ex in pretium mollis. Donec consectetur, nunc in tristique faucibus, metus nulla vehicula enim, et feugiat orci ipsum nec nisi. Nulla gravida venenatis tristique. Donec volutpat erat lorem, sit amet imperdiet lectus lacinia eu. Donec eleifend tristique nulla, at placerat dui finibus quis. Sed vel malesuada metus, vitae mollis dolor. Donec lobortis dictum neque, vitae ultricies dolor tristique at. Morbi vestibulum viverra sapien.
+
+          Vivamus leo tellus, luctus id vulputate a, viverra ut orci. Donec vitae metus convallis, sollicitudin elit vitae, ultricies ex. Vivamus rutrum lacus non tellus sodales, vel pharetra dolor suscipit. Nunc eget augue pretium, sodales metus eget, sagittis quam. Nam ullamcorper ut nisl quis ultricies. Nulla et mattis enim. Duis tempus facilisis feugiat.
+
+          Donec egestas metus eu mollis ullamcorper. Ut varius sapien elit, blandit blandit odio euismod in. In porta ligula non urna faucibus, sit amet pulvinar odio maximus. Vestibulum malesuada dignissim sollicitudin. Morbi ornare neque orci, vitae interdum dolor scelerisque eu. Nullam sodales et massa at aliquet. Fusce tempus erat ut metus elementum faucibus. Suspendisse potenti. Quisque at dapibus dolor. Suspendisse rutrum facilisis ipsum eu venenatis.
+
+          Nam nec odio sed lorem tempus gravida at in libero. Vestibulum in tincidunt enim. Vestibulum tempor, risus at dignissim lobortis, libero ligula varius dolor, ut suscipit magna ipsum auctor ex. Mauris dignissim ex sed iaculis commodo. In eget felis urna. Donec leo dui, egestas sed viverra eu, suscipit auctor augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis viverra, ligula ut consectetur vestibulum, lectus libero sagittis diam, a vestibulum mauris erat nec elit. In vehicula euismod ex. In ac tortor est. Nullam dictum, odio vel tempor porttitor, sem magna interdum augue, et congue tortor diam a augue. Etiam congue posuere vehicula. Quisque nulla mi, aliquet at nisl sed, porttitor imperdiet quam.
+
+          Integer massa nunc, ultrices ac lectus non, dignissim blandit neque. Praesent a varius libero. Suspendisse ac pharetra urna. Maecenas egestas porttitor enim, sed aliquet orci sagittis sit amet. Morbi quis euismod est. Morbi placerat tortor nisl, quis lobortis orci eleifend euismod. Aliquam eget purus et enim vestibulum vestibulum sit amet eget lacus. Cras interdum ex mi, at faucibus orci volutpat eu. Vivamus quis viverra mauris, eu bibendum elit. Donec vel mattis dolor. Proin odio dolor, scelerisque et ullamcorper lacinia, vulputate iaculis velit.
+        </p>
       </div>
 
 
@@ -119,10 +194,53 @@
 
 <!--        </ul>-->
 <!--      </div>-->
-    </div>
+        <h2 id="S1">Section 1</h2>
+        <button class="accordion"> Question A
+          <span style="float: right;font-size: 18px">-</span>
+        </button>
+        <div class="panel">
+          <p class="answers">This is a question, which fits under section 1.</p>
+        </div>
+
+        <button class="accordion"> Question B
+          <span style="float: right;font-size: 18px">-</span>
+        </button>
+        <div class="panel">
+          <p class="answers">This is a second question, which fits under section 1.</p>
+        </div>
+
+        <h2 id="S2">Section 2</h2>
+        <button class="accordion"> Question A
+          <span style="float: right;font-size: 18px">-</span>
+        </button>
+        <div class="panel">
+          <p class="answers">This is a question, which fits under section 2.</p>
+        </div>
+
+        <button class="accordion"> Question B
+          <span style="float: right;font-size: 18px">-</span>
+        </button>
+        <div class="panel">
+          <p class="answers">This is a second question, which fits under section 2.</p>
+        </div>
+
+        <h2 id="S3">Section 3</h2>
+        <button class="accordion"> Question A
+          <span style="float: right;font-size: 18px">-</span>
+        </button>
+        <div class="panel">
+          <p class="answers">This is a question, which fits under section 3.</p>
+        </div>
+
+        <button class="accordion"> Question B
+          <span style="float: right;font-size: 18px">-</span>
+        </button>
+        <div class="panel">
+          <p class="answers">This is a second question, which fits under section 3.</p>
+        </div>
+
     <div id="footer" style="background-color:#8a8a8a;clear:both;text-align:center;float: bottom">
       copyright © milkcrate.com</div>
-
   </div>
 
 <script>
@@ -134,6 +252,7 @@
     acc[i].addEventListener("click", function() {
       this.classList.toggle("active");
       var panel = this.nextElementSibling;
+      console.log("here");
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {
