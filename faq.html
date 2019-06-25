@@ -13,7 +13,8 @@
       }
       ul.top {
         list-style-type: none;
-        padding: 10px;
+        padding: 0;
+        margin: 0;
         overflow: hidden;
         background-color: #8a8a8a;
         border: 1px solid #638da6;
@@ -25,11 +26,11 @@
       }
 
       .sidenav {
-        width: 100px;
+        width: 150px;
         position: fixed;
         z-index: 1;
-        top: 200px;
-        left: 0;
+        top: 50px;
+        left: 25px;
         background: #8a8a8a;
         border: 1px solid #638da6;
         overflow-x: hidden;
@@ -40,6 +41,7 @@
         display: block;
         color: #202020;
         padding: 6px 8px 6px 16px;
+        text-decoration: none;
       }
 
       .topsec{
@@ -51,7 +53,7 @@
       }
       .search{
         background-color: #f8f8ff;
-        border: 2px solid #638da6;
+        border: 1px solid #638da6;
       }
       .accordion {
         background-color: white;
@@ -79,15 +81,24 @@
       .answers {
         color: #638DA6
       }
+      .main {
+        margin-left: 200px;
+      }
 
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body style="background-color: #EBEEF0">
-  <button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>
-  <div class="container" >
+  <div class="sidenav">
+    <a href="#header">Back to Top</a>
+    <a href="#FAQ">FAQ</a>
+    <a href="#S1">Section 1</a>
+    <a href="#S2">Section 2</a>
+    <a href="#S3">Section 3</a>
+  </div>
+  <div class="main">
 
-    <div id="header" >
+    <div id="header">
       <h1 style="margin-bottom:0; color:#638DA6">The MilkCrate Navigation Bar</h1></div>
 
   <!--    <div class="topbar">
@@ -121,14 +132,6 @@
           </div>
         </div>
       </div>
-
-    <div class="sidenav">
-      <a href="#FAQ">FAQ</a>
-      <a href="#S1">Section 1</a>
-      <a href="#S2">Section 2</a>
-      <a href="#S3">Section 3</a>
-    </div>
-
 
       <h2 id="FAQ">FAQ</h2>
       <button class="accordion"> Question 1
@@ -238,10 +241,10 @@
         <div class="panel">
           <p class="answers">This is a second question, which fits under section 3.</p>
         </div>
+      </div>
 
     <div id="footer" style="background-color:#8a8a8a;clear:both;text-align:center;float: bottom">
       copyright © milkcrate.com</div>
-  </div>
 
 <script>
 
@@ -252,7 +255,6 @@
     acc[i].addEventListener("click", function() {
       this.classList.toggle("active");
       var panel = this.nextElementSibling;
-      console.log("here");
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {
